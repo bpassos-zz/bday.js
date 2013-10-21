@@ -1,0 +1,24 @@
+.title{
+	font-family: 'Lobster', cursive;
+	font-size: 40px;
+	color: #662d91;
+	text-align: center;
+}
+
+/****************************************
+	Overides 
+****************************************/
+
+.lead{
+	text-align: center;
+}
+
+.space30{
+	margin-bottom: 30px;
+}
+
+.alert{
+	display: none;
+	position: absolute;
+	width: 75%;
+}
