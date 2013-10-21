@@ -1,126 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="shortcut icon" href="../../assets/ico/favicon.png">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>ajaxTest</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Bday.Js</title>
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/custom.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
 
-    <!-- Font-awesome CSS -->
-    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+        <!-- Add your site or application content here -->
+        <p>Hello world! This is HTML5 Boilerplate.</p>
 
-    <!-- jQueryUI CSS -->
-    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
-    
-    <!-- Custom styles for this template -->
-    <link href="css/sticky-footer.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+        <form id="myForm" action="userInfo.php" method="post">
+            Name: <input type="text" name="name"/> <br />
+            Age: <input type="" name="age"/> <br />
+            Birthday: <input type="" name="birthday"/>
+            <button id="sub">Save</button>
+        </form>
+        <span id="result"></span>
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="../../assets/js/html5shiv.js"></script>
-      <script src="../../assets/js/respond.min.js"></script>
-    <![endif]-->
-  </head>
+        <h3 align="center">Manage Student Details</h3>
+        <table border="1" align="center">
+           <tr>
+               <td> <input type="button" id="display" value="Display All Data" /> </td>
+           </tr>
+        </table>
+        <div id="responsecontainer" align="center">
 
-  <body>
-    <!-- Wrap all page content here -->
-    <div id="wrap">
-      <!-- Begin page content -->
-      <div class="container">
-        <div class="alert alert-success"><strong>Amazing!</strong> Another birthday for the list! :-)</div>
-        <div class="page-header">
-          <div class="title">Bday.JS</div>
         </div>
-        <p class="lead">Bday.JS allows you to organise birthdays.</p>
-        <p><i class="icon-phone"></i>Add a new birthday to the list...</p>
-        <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-primary">Add Bday!</button>
-      </div>
-      
-      <div class="space30"></div>
 
-      <!-- Grid -->
-      <div class="container">
-          <div class="table-responsive">
-            <table class="table table-bordered table-striped" id="bdayTable">
-              <thead>
-                <tr>
-                  <th>Name</th>
-                  <th>Birthday</th>
-                  <th>Note</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th>Bruno Passos</th>
-                  <td>23rd Nov 1984</td>
-                  <td>Dude, you're getting old!</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-      </div>
-    </div>
-    <!-- Button trigger modal -->
-    <!-- Modal -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <h4 class="modal-title">Add Bday!</h4>
-          </div>
-          <div class="modal-body">
-            <form role="form">
-              <div class="form-group">
-                <label for="whosBirthday">Who's birthday is it?</label>
-                <input type="text" class="form-control" id="whosBirthday" placeholder="Who's birthday is it?">
-              </div>
-              <div class="form-group">
-                <label for="datepicker">When's the birthday</label>
-                <input type="text" id="datepicker"/>
-              </div>
-              <div class="form-group">
-                <label for="birthdayNote">Note</label>
-                <textarea class="form-control" id="birthdayNote" rows="3"></textarea>
-              </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" id="addBirthday" class="btn btn-primary">Add Birthday!</button>
-          </div>
-        </div><!-- /.modal-content -->
-      </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="js/myScript.js"></script>
 
-    
-
-
-
-    <div id="footer">
-      <div class="container">
-        <p class="text-muted credit">Made with love and care by <a href="http://www.twitter.com/brunopassos">@brunopassos</a>.</p>
-      </div>
-    </div>
-
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/script.js"></script>
-  </body>
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    </body>
 </html>
